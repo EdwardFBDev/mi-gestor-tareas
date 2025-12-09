@@ -25,8 +25,8 @@ html, body {
 body {
     font-family: system-ui, sans-serif;
     background-color: var(--bg-page);
-    /* img -> pinterest */
-    background-image: url("https://i.pinimg.com/1200x/39/57/c3/3957c3d06464b54f35167e25ba294aba.jpg"); 
+    /* img -> web */
+    background-image: url("https://i.pinimg.com/1200x/a6/da/fe/a6dafe7e0d21800ed20758efd905cfaa.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -279,4 +279,24 @@ main {
     padding: 0.4rem 0.9rem;
     background: transparent;
     cursor: pointer;
+}
+
+.form-field--inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-field--inline label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.task-form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #111; /* color del check (soportado en la mayoría de navegadores modernos) */
 }

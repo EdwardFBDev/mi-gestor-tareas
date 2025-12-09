@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -58,7 +59,7 @@
             <header class="topbar">
                 <!-- topbar_search -->
                 <div class="topbar_search">
-                    <span class="icon_search">🔍</span>
+                    <i class="bi bi-search"></i>
                     <input 
                         type="search"
                         id="search-task"
@@ -69,8 +70,12 @@
                 <!-- Topbar_actions -->
                 <div class="topbar_actions">
                     <button type="button" class="btn-primary" id="btn-add-task">+ ADD</button>
-                    <button type="button" class="btn-icon" id="btn-toggle-theme" aria-label="Toggle theme">🌙</button>
-                    <button type="button" class="btn-icon" id="btn-toggle-theme" aria-label="Toggle theme">☀️</button>
+                    <button type="button" class="btn-icon" id="btn-toggle-theme-dark" aria-label="Toggle dark theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button type="button" class="btn-icon" id="btn-toggle-theme-light" aria-label="Toggle light theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
                 </div>
             </header>
 
@@ -94,43 +99,44 @@
                 <!-- Bento -->
                 <div class="task-grid" id="task-grid"></div>
             </section>
-            </div>
         </main>
-            <!-- MODAL -- NEW TASK -->
-            <div class="task-modal-overlay" id="task-modal" aria-hidden="true">
-                <div class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-modal-title">
-                    <form class="task-form" id="task-form">
+    </div>
 
-                        <h2 id="task-modal-title">Add new task</h2>
+    <!-- MODAL -- NEW TASK -->
+    <div class="task-modal-overlay" id="task-modal" aria-hidden="true">
+        <div class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-modal-title">
+            <form class="task-form" id="task-form">
 
-                        <div class="form-field">
-                            <label for="title">Title</label>
-                            <input type="text" id="title" name="title" minlength="3" required placeholder="Write a short title" />
-                            <p class="form-error" id="title-error"></p>
-                        </div>
+                <h2 id="task-modal-title">Add new task</h2>
 
-                        <div class="form-field">
-                            <label for="description">Details</label>
-                            <textarea id="description" name="description" rows="3"
-                                placeholder="Add a short description (optional)"></textarea>
-                        </div>
-            
-                        <div class="form-field form-field--inline">
-                            <label for="completed">
-                                <input type="checkbox" id="completed" name="completed" />
-                                Mark as completed
-                            </label>
-                        </div>
-            
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary">Save task</button>
-                            <button type="button" class="btn-secondary" id="btn-cancel-form">Cancel</button>
-                        </div>
-            
-                        <div class="form-feedback" id="form-feedback"></div>
-                    </form>
+                <div class="form-field">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" minlength="3" required placeholder="Write a short title" />
+                    <p class="form-error" id="title-error"></p>
                 </div>
-            </div>
+
+                <div class="form-field">
+                    <label for="description">Details</label>
+                    <textarea id="description" name="description" rows="3"
+                        placeholder="Add a short description (optional)"></textarea>
+                </div>
+    
+                <div class="form-field form-field--inline">
+                    <label for="completed">
+                        <input type="checkbox" id="completed" name="completed" />
+                        Mark as completed
+                    </label>
+                </div>
+    
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Save task</button>
+                    <button type="button" class="btn-secondary" id="btn-cancel-form">Cancel</button>
+                </div>
+    
+                <div class="form-feedback" id="form-feedback"></div>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
