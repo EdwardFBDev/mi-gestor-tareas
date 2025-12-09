@@ -87,12 +87,12 @@
             <section class="task-panel">
                 <!-- Summary -->
                 <div class="task-panel_sumary">
-                    Tasks: <span id="summary-total">10</span> total |
-                    <span id="summary-done">3</span> done |
-                    <span id="summary-pending">7</span> pending
+                    Tasks: <span id="summary-total">0</span> total |
+                    <span id="summary-done">0</span> done |
+                    <span id="summary-pending">0</span> pending
                 </div>
                 <!-- Bento -->
-                <div class="task-grid" id="task-grid">agregar con JS</div>
+                <div class="task-grid" id="task-grid"></div>
             </section>
             </div>
         </main>
@@ -100,12 +100,15 @@
             <div class="task-modal-overlay" id="task-modal" aria-hidden="true">
                 <div class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-modal-title">
                     <form class="task-form" id="task-form">
+
                         <h2 id="task-modal-title">Add new task</h2>
+
                         <div class="form-field">
                             <label for="title">Title</label>
                             <input type="text" id="title" name="title" minlength="3" required placeholder="Write a short title" />
                             <p class="form-error" id="title-error"></p>
                         </div>
+
                         <div class="form-field">
                             <label for="description">Details</label>
                             <textarea id="description" name="description" rows="3"
