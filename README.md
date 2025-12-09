@@ -12,7 +12,7 @@
 
 <br clear="both">
 
-<h6 align="left">Proyecto del curso Web 2. Gestión de Formularios & Fetch API</h6>
+<h6 align="left">Proyecto del curso Web 1. Gestión de Formularios & Fetch API</h6>
 
 ###
 
