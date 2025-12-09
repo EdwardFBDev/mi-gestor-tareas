@@ -26,7 +26,7 @@ body {
     font-family: system-ui, sans-serif;
     background-color: var(--bg-page);
     /* img -> web */
-    background-image: url("https://i.pinimg.com/1200x/a6/da/fe/a6dafe7e0d21800ed20758efd905cfaa.jpg");
+    background-image: url("https://getwallpapers.com/wallpaper/full/9/2/8/421653.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -65,6 +65,17 @@ body {
     opacity: 0.8;
     margin-top: 0.25rem;
 }
+.sidebar_stats ul {
+    /* remove bullets */
+    list-style: none;  
+    padding-left: 0;   
+    margin-left: 0;
+}
+.sidebar_stats li {
+    font-size: 0.9rem;;
+    margin-bottom: 0.2rem;
+}
+
 /* create line section */
 .sidebar_section {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -76,6 +87,7 @@ body {
     margin-bottom: 0.75rem;
     opacity: 0.85;
 }
+
 
 .btn-filter,
 .btn-ghost {
@@ -161,6 +173,10 @@ main {
     padding-inline: 0.25rem;
 }
 
+.view-tabs_title{
+    color: #cacaca;
+    font-size: 2rem;
+}
 .tab-btn {
     border: none;
     border-radius: 999px;
@@ -206,6 +222,12 @@ main {
     border-radius: var(--radius-md);
     padding: 1rem;
     box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
 }
 
 .task-card_header {
@@ -225,6 +247,37 @@ main {
 .tag-btn--danger {
     opacity: 0.8;
 }
+
+/* TASK STYLE -- COMPLETED */
+.task-card--completed {
+    background: rgba(0, 180, 80, 0.20);
+    border: 1px solid rgba(0, 150, 60, 0.35);
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.task-card--completed .task-card_title {
+    text-decoration: line-through;
+    color: rgb(60, 102, 71);
+    opacity: 0.8;
+}
+
+.task-card--completed .task-card_status span {
+    font-weight: bold;
+    color: rgb(60, 102, 71);
+}
+
+.tag-btn:hover {
+    color: #111;
+    background: #eeeeee;
+    border: 1px solid #111;
+}
+
+.tag-btn--danger:hover {
+    background: #d33;
+    border: 1px solid #d33;
+}
+
 
 /* MODAL -- NEW TASK */
 .task-modal-overlay {
@@ -298,5 +351,17 @@ main {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  accent-color: #111; /* color del check (soportado en la mayoría de navegadores modernos) */
+  accent-color: #111;
+}
+
+.status-done {
+  color: #177e42;
+  font-size: 1rem;
+  margin-right: 4px;
+}
+
+.status-pending {
+  color: #bbb; 
+  font-size: 1rem;
+  margin-right: 4px;
 }

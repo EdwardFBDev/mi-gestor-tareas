@@ -46,7 +46,7 @@ let editingTaskId = null;
  * - Configura los eventos básicos (modal, etc.).
  */
 document.addEventListener("DOMContentLoaded", () => {
-    // inits
+    // init modal events
     setupModalEvents();
     setupFilterEvents();
     setupSearchEvent();
@@ -163,7 +163,11 @@ function createTaskCard(task) {
         </div>
     </header>
     <p class="task-card_status">
-        Status: <span>${task.completed ? "✅ Done" : "⬜ Pending"}</span>
+        Status: <span>${task.completed 
+            ? `<i class="bi bi-check-circle-fill status-done"></i> Done` 
+            : `<i class="bi bi-circle status-pending"></i> Pending`
+        }
+            </span>
     </p>
     `;
 
